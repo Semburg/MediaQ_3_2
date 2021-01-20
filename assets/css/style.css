@@ -1,0 +1,522 @@
+/* **************
+*   FONTS
+font-family: 'Nunito', sans-serif;
+font-family: 'Rock Salt', cursive;
+
+*/
+
+/* *********************
+*   CLEAR START
+*  ********************* */
+
+body,main{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    display: inline-block;
+}
+
+
+
+/* *********************
+*   FIRST PAGE
+*  ********************* */
+
+
+
+/* ?     ISSUE: 1    */
+/* //     ab einer bestimmten Verkleinerung trennen sich die "Strach and Foto" Seiten   */
+/* *   LOESUNG -   IMG bei #first-page war contain, changing to cover solved problem  */
+
+#first-page{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 85vh;
+    width: 100vw; 
+    background: url("../img/dog_catching_snack.jpg") center/cover no-repeat;
+    text-align: center;
+}
+#overpage{
+
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: rgb(225,225,235 );
+}
+#wrapper-first{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    /* height: 100vh;
+    width: 100vw;
+    background: url("../img/dog_catching_snack.jpg") center/contain no-repeat;
+    text-align: right; */
+}
+
+#wrapper-hidden{
+    display: none;
+    background-color: rgb(223,132,128 );
+    height: 80vh;
+    width: 49%;
+}
+
+#dog-hunt{
+    width: 50vw;
+    height: 70vh;
+}
+
+#chomp{
+    font-family: 'Rock Salt', cursive;
+
+}
+
+#left-small{
+    color: rgb(223,132,128 );
+    width: 40%;
+    font-size: 0.9em;
+    padding-right: 10px;
+}
+
+/* *********************
+*   SECOND PAGE  and  BOTTOM PART of first Page    /   second section
+*  ********************* */
+
+.over-text{
+    padding: 0;
+    margin: 0;
+    height: 15vh;
+    text-align: center;
+    background-color: rgb(223,132,128 );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.over-text p{
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+}
+
+/* *********************
+*   SECOND PAGE  from here!! 
+*  ********************* */
+
+#columns3
+{
+    height: 85vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrap1{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap1 h1{
+    color: rgb(223,132,128 );
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.wrap1 p{
+    font-weight: 700;
+}
+
+/* *********************
+*   THIRD PAGE
+*  ********************* */
+
+#parts1 {
+    /* width: 100vw; */
+    height: 20vh;
+    background: url("../img/dog_eating_cookies.jpg") top/cover no-repeat;
+}
+
+#parts2{
+    
+    border-image-width: 2vw;
+    padding-left: 25px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+#parts2 p{
+    font-weight: 700;
+    display: inline-block;
+}
+
+#parts2 p:nth-of-type(2){
+    padding-left: 50%;
+}
+
+#parts2 p:nth-of-type(3){
+    padding-left: 20%;
+}
+
+#parts3 {
+    text-align: center;
+}
+
+#parts3 p{
+    padding: 0 10px 10px 10px;
+    font-weight: 400;
+}
+
+/* *********************
+*   FOOTER PAGE
+*  ********************* */
+
+#foot{
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+section form{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 7vh;
+}
+
+#foot input{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 95%;
+    height: 40px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+#foot input::placeholder{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#foot .button {
+    color: white;
+    background-color: rgb(223,132,128);
+}
+
+#foot input[type=placeholder]{
+    color: rgb(223,132,128 ) ;
+}
+
+#form-id{
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+/* *********************
+*   STARTING MEDIA - QUERY
+*  ********************* */
+
+@media (min-width:375px){
+
+    /* *    first page  above 375  */
+
+    #chomp{
+    font-size: 1.2em;
+    }
+
+    #left-big{
+        font-size: 1.2em;
+    }
+    #left-small{
+        font-size: 1.2em;
+    }
+
+    /* *  second page above 375 */
+
+    #columns3{
+        margin-left: 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .wrap1{
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .wrap1 h1{
+        padding-right: 15px;
+    }
+
+    .wrap1 p{
+        padding-right: 15px;
+    }
+
+    /* * third page above 375 */
+
+    #page-three{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #parts1 {
+        width: 45vw;
+        height: 40vh;
+        background: url("../img/dog_eating_cookies.jpg") center/cover no-repeat;
+    }
+
+    #parts2{
+        width: 45vw;
+        height: 40vh;
+    }
+
+
+
+    #parts3{
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    /* * footer  above 375 */
+
+    #foot input{
+        width: 70%;
+    }
+
+    #form-id{
+        justify-content: flex-start;
+    }
+    #form-id{
+    /* display: inline-block; */
+    padding-left: 15px;
+
+    }
+
+    #wrapper-footer{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* *********************
+*   ABOCVE 600px
+*  ********************* */
+
+@media (min-width:600px){
+
+    /* *    first page  above 600  */
+
+    #first-page{
+        margin: 0;
+        padding: 0;
+        /* text-align: center; */
+        height: 85vh;
+        width: 100vw; 
+        background: none
+    }
+
+    #wrapper-hidden{
+        display: flex;
+        justify-content: flex-end;
+        width: 50vw;
+        height: 75vh;
+        text-align: right;
+        background-color:  rgb(223,132,128);
+
+    }
+
+
+/* *********************
+*   BELOW   CHANGING THE TITEL PAGE
+*  ********************* */  
+
+    /* *   TEXT PHRASE */
+    #left-big{
+
+        font-size: 2em;
+        display: inline-block;
+        color: white;
+        padding-left: 20vw;
+    }
+
+    /* *    IMG !!  */
+    #dog-hunt{
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        padding-left: 8%;
+        width: 50vw;
+        height: 73vh;
+    }
+
+    #wrapper-hidden{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* align-items: baseline; */
+    }
+
+    #overpage{
+        background-color: white;
+    }
+    
+    #wrapper-first{
+        display: none;
+    }
+
+
+    /* *       CHNGE THE OVERLINE OF NEXT PAGE!! */
+    .over-text{
+        background-color: rgb(255, 255, 255);
+
+    }
+    .over-text p{
+        font-size: 2.5em;
+        color: rgb(223,132,128);
+        padding: 0;
+        margin: 0;
+        font-weight: 900;
+    }
+
+  /* *********************
+*   2th PAGE
+*  ********************* */  
+
+    #columns3
+    {
+        height: 35vh;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-around;
+        /* align-items: center; */
+        padding-left: 0;
+        margin-right: 10%;
+    
+    }
+    
+    .wrap1{
+
+        width: 30vw;
+        height: 35vh;
+        border: 1px grey solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 15px;
+        box-shadow: 1px 1px 10px 0 grey;
+    }
+
+/* *********************
+*   3d Page
+*  ********************* */  
+
+#page-three{
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+}
+
+#parts1 {
+    width: 20vw;
+    height: 35vh;
+    background: url("../img/dog_eating_cookies.jpg") center/cover no-repeat;
+    margin-left: 10px;
+}
+
+#parts2{
+    width: 50vw;
+    height: 35vh;
+}
+
+
+
+#parts3{
+    width: 20vw;
+    height: 35vh;
+    display: inline-block;
+
+    padding-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    padding-bottom: 0;
+    background-color: rgb(223,132,128);
+    color:white;
+    border-radius:10px;
+}
+/* *********************
+*   3d Page
+*  ********************* */  
+
+    section form{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #foot input{
+        width: 40%;
+    }
+
+    #foot .button{
+        width: 20%;
+    }
+
+    #form-id{
+        margin-bottom: 5vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+     #wrapper-footer{
+        display: flex;
+        justify-content: space-between;
+        
+    } 
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
